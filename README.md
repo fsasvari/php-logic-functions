@@ -8,5 +8,5 @@ PHP logic functions with arrays and algorithms containing 8 tasks (functions):
  - 4. task - Smallest number in row
  - 5. task - Longest common string
  - 6. task - The approximate sum of all members within the group
- - 7. task - Numbers divisible by 3
+ - 7. task - Numbers divisible by 3, by 5 and by 3 and 5
  - 8. task - Recursion with folders and files
