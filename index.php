@@ -103,19 +103,19 @@ echo '<h2>4. Task - Smallest number in row</h2>';
 
 $row = [5, 3, 10, 2, 1];
 print_r($row);
-echo '<p>Smallest: ' . getSmallestNumberInRow($row) . '</p>';
+echo '<p>Smallest: ' . getMinNumberInRow($row) . '</p>';
 
 $row = [0, 5, 8, 3, 12];
 print_r($row);
-echo '<p>Smallest: ' . getSmallestNumberInRow($row) . '</p>';
+echo '<p>Smallest: ' . getMinNumberInRow($row) . '</p>';
 
 $row = [25, 33, 12, 8, 17];
 print_r($row);
-echo '<p>Smallest: ' . getSmallestNumberInRow($row) . '</p>';
+echo '<p>Smallest: ' . getMinNumberInRow($row) . '</p>';
 
 $row = [15, 18, 3, 0, -5, -10];
 print_r($row);
-echo '<p>Smallest: ' . getSmallestNumberInRow($row) . '</p>';
+echo '<p>Smallest: ' . getMinNumberInRow($row) . '</p>';
 
 echo '<hr>';
 

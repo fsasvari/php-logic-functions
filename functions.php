@@ -59,7 +59,7 @@ if ( ! function_exists('getPow'))
 	}
 }
 
-if ( ! function_exists('getSmallestNumberInRow'))
+if ( ! function_exists('getMinNumberInRow'))
 {
 	/**
 	 * 4. task
@@ -69,7 +69,7 @@ if ( ! function_exists('getSmallestNumberInRow'))
 	 * @param  array  $row
 	 * @return int
 	 */
-	function getSmallestNumberInRow(array $row = [])
+	function getMinNumberInRow(array $row = [])
 	{
 		foreach ($row as $i => $value) {
 			if ($i == 0) {
@@ -80,6 +80,28 @@ if ( ! function_exists('getSmallestNumberInRow'))
 		}
 		
 		return $minimum;
+	}
+}
+
+if ( ! function_exists('getApproximateGroups'))
+{
+	/**
+	 * 6. task
+	 * 
+	 * Get the approximate sum of all members within the group
+	 *
+	 * @param  array  $row
+	 * @param  int  $groupsCount
+	 * @return array
+	 */
+	function getApproximateGroups(array $row = [], $groupsCount = 1)
+	{
+		$groups = [];
+		foreach ($row as $number) {
+			
+		}
+		
+		return;
 	}
 }
 
