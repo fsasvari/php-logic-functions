@@ -74,9 +74,7 @@ if ( ! function_exists('getSmallestNumberInRow'))
 		foreach ($row as $i => $value) {
 			if ($i == 0) {
 				$minimum = $value;
-			}
-			
-			if ($minimum > $value) {
+			} elseif ($minimum > $value) {
 				$minimum = $value;
 			}
 		}
@@ -111,5 +109,7 @@ if ( ! function_exists('getLocasticNumbers'))
 				echo "LOCASTIC<br>";
 			}
 		}
+		
+		return;
 	}
 }
