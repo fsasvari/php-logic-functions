@@ -109,6 +109,50 @@ if ( ! function_exists('getMinNumberInRow'))
 	}
 }
 
+if ( ! function_exists('getLongestCommonString'))
+{
+	/**
+	 * 5. task
+	 * 
+	 * Get the longest common substring in string
+	 *
+	 * @param  string  $string1
+	 * @param  string  $string2
+	 * @return string
+	 */
+	function getLongestCommonString($string1, $string2)
+	{
+		$length1 = strlen($string1);
+		$length2 = strlen($string2);
+		
+		$longestCommonString = [];
+		$largestCommonString = 0;
+		
+		for ($i = 0; $i < $length1; $i++) {
+			for ($j = 0; $j < $length2; $j++) {
+				if ($string1[$i] === $string2[$j]) {
+					if ($i == 0 || $j == 0) {
+						$longestCommonString[$i][$j] = 1;
+					} else {
+						$longestCommonString[$i][$j] = $longestCommonString[$i - 1][$j - 1] + 1;
+					}
+					
+					if ($longestCommonString[$i][$j] > $largestCommonString) {
+						$largestCommonString = $longestCommonString[$i][$j];
+						$return = '';
+					}
+
+					if ($longestCommonString[$i][$j] === $largestCommonString) {
+						$return = substr($string1, $i - $largestCommonString + 1, $largestCommonString);
+					}
+				}
+			}
+		}
+		
+		return $return;
+	}
+}
+
 if ( ! function_exists('getApproximateGroups'))
 {
 	/**

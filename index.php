@@ -88,7 +88,7 @@ echo '<hr>';
 
 echo '<h2>3. Task - Most reps in row</h2>';
 
-$row = [5, 3, 10, 2, 1, 'cevapi', 'pljeskavica', 'cevapi', 3, 10, 'cevapi'];
+$row = ['zagrebacki', 'becki', 'osjecki', 'ljubljanski', 'salata :(', 'cevapi', 'pljeskavica', 'cevapi', 'sendvic', 'lepinja', 'cevapi'];
 print_r($row);
 echo '<p>Most repeated: ' . getMostRepeatedElement($row) . '</p>';
 
@@ -138,7 +138,20 @@ echo '<hr>';
 
 echo '<h2>5. Task - Longest common string</h2>';
 
+$string1 = "sti";
+$string2 = "locastic";
 
+echo '<p>' . getLongestCommonString($string1, $string2) . '</p>';
+
+$string1 = "loca";
+$string2 = "oc";
+
+echo '<p>' . getLongestCommonString($string1, $string2) . '</p>';
+
+$string1 = "locastic";
+$string2 = "cast";
+
+echo '<p>' . getLongestCommonString($string1, $string2) . '</p>';
 
 echo '<hr>';
 
