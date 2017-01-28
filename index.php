@@ -12,8 +12,6 @@ include('functions.php');
 
 echo '<h2>1. Task - Palindrome</h2>';
 
-echo '<p>Check if string is a palindrome:</p>';
-
 $string = 'anavolimilovana';
 echo '<p>' . $string . ' = ' . var_export(isPalindrome($string), true) . '</p>';
 
@@ -45,9 +43,7 @@ echo '<hr>';
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>2. Task - Pow</h2>';
-
-echo '<p>Create PHP pow function</p>';
+echo '<h2>2. Task - Pow function</h2>';
 
 $n = 2;
 $m = 3;
@@ -78,5 +74,103 @@ $n = -2;
 $m = 2;
 echo '<p>' . $n . '^' . $m . ' = ' . getPow($n, $m) . '</p>';
 echo '<p>' . $n . '^' . $m . ' = ' . pow($n, $m) . '</p>';
+
+echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 3. Task
+|
+| Get the most repetition number in row
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>3. Task - Most reps in row</h2>';
+
+
+
+echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 4. Task
+|
+| Get the smallest number in row
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>4. Task - Smallest number in row</h2>';
+
+$row = [5, 3, 10, 2, 1];
+print_r($row);
+echo '<p>Smallest: ' . getSmallestNumberInRow($row) . '</p>';
+
+$row = [0, 5, 8, 3, 12];
+print_r($row);
+echo '<p>Smallest: ' . getSmallestNumberInRow($row) . '</p>';
+
+$row = [25, 33, 12, 8, 17];
+print_r($row);
+echo '<p>Smallest: ' . getSmallestNumberInRow($row) . '</p>';
+
+$row = [15, 18, 3, 0, -5, -10];
+print_r($row);
+echo '<p>Smallest: ' . getSmallestNumberInRow($row) . '</p>';
+
+echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 5. Task
+|
+| Get the longest common string in string
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>5. Task - Longest common string</h2>';
+
+
+
+echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 6. Task
+|
+| Get the approximate sum of all members within the group
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>6. Task - The approximate sum of all members within the group</h2>';
+
+
+
+echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 7. Task
+|
+| Get all numbers from 1 to 100 divisible by 3, by 5 and by 3 and 5
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>7. Task - Numbers divisible by 3, by 5 and by 3 and 5</h2>';
+
+
+
+echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 8. Task
+|
+| Get all folder and files recursively
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>8. Task - Recursion with folders and files</h2>';
+
+
 
 echo '<hr>';

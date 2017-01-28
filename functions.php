@@ -58,3 +58,29 @@ if ( ! function_exists('getPow'))
 		return $result;
 	}
 }
+
+if ( ! function_exists('getSmallestNumberInRow'))
+{
+	/**
+	 * 4. task
+	 * 
+	 * Get the smallest number in row
+	 *
+	 * @param  array  $row
+	 * @return int
+	 */
+	function getSmallestNumberInRow(array $row = [])
+	{
+		foreach ($row as $i => $value) {
+			if ($i == 0) {
+				$minimum = $value;
+			}
+			
+			if ($minimum > $value) {
+				$minimum = $value;
+			}
+		}
+		
+		return $minimum;
+	}
+}
