@@ -9,4 +9,4 @@ PHP logic functions with arrays and algorithms containing 8 tasks (functions):
  - 5. task - Longest common string
  - 6. task - The approximate sum of all members within the group &#10004;
  - 7. task - Numbers divisible by 3, by 5 and by 3 and 5 &#10004;
- - 8. task - Recursion with folders and files
+ - 8. task - Recursion with folders and files &#10004;
