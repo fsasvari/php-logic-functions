@@ -97,11 +97,36 @@ if ( ! function_exists('getApproximateGroups'))
 	function getApproximateGroups(array $row = [], $groupsCount = 1)
 	{
 		$groups = [];
-		foreach ($row as $number) {
-			
+		for ($i = 1; $i <= $groupsCount; $i++) {
+			$groups[$i] = [
+				'row' => [],
+				'sum' => 0
+			];
 		}
 		
-		return;
+		$rowCount = count($row);
+		
+		for ($i = 0; $i < $rowCount; $i++) {
+			$maxId = getMaxNumberIdInRow($row);
+			$num = $row[$maxId];
+			
+			foreach ($groups as $j => &$group) {
+				if ($j == 1) {
+					$groupId = $j;
+					$sum = $group['sum'];
+				} elseif ($sum > $group['sum']) {
+					$groupId = $j;
+					$sum = $group['sum'];
+				}
+			}
+			
+			$groups[$groupId]['row'][] = $num;
+			$groups[$groupId]['sum'] += $num;
+			
+			unset($row[$maxId]);
+		}
+		
+		return $groups;
 	}
 }
 

@@ -1,5 +1,6 @@
 <?php
 
+include('helpers.php');
 include('functions.php');
 
 /*
@@ -143,7 +144,29 @@ echo '<hr>';
 
 echo '<h2>6. Task - The approximate sum of all members within the group</h2>';
 
+$row = [2, 1, 4, 7, 1, 2, 6, 8];
+$groupsCount = 3;
+$groups = getApproximateGroups($row, $groupsCount);
 
+print_r($row);
+echo '<hr>';
+foreach ($groups as $group) {
+	print_r($group['row']);
+	echo '<p>Sum: ' . $group['sum'] . '</p>';
+}
+
+echo '<hr>';
+
+$row = [15, 12, 32, 4, 5, 1, 1, 8, 23, 7, 3, 4];
+$groupsCount = 4;
+$groups = getApproximateGroups($row, $groupsCount);
+
+print_r($row);
+echo '<hr>';
+foreach ($groups as $group) {
+	print_r($group['row']);
+	echo '<p>Sum: ' . $group['sum'] . '</p>';
+}
 
 echo '<hr>';
 

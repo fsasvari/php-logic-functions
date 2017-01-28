@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists('getMaxNumberInRow'))
+if ( ! function_exists('getMaxNumberIdInRow'))
 {
 	/**
 	 * Get the biggest number in row
@@ -8,16 +8,18 @@ if ( ! function_exists('getMaxNumberInRow'))
 	 * @param  array  $row
 	 * @return int
 	 */
-	function getMaxNumberInRow(array $row = [])
+	function getMaxNumberIdInRow(array $row = [])
 	{
 		foreach ($row as $i => $value) {
-			if ($i == 0) {
+			if ($i == key($row)) {
 				$maximum = $value;
+				$maximumId = $i;
 			} elseif ($maximum < $value) {
 				$maximum = $value;
+				$maximumId = $i;
 			}
 		}
 		
-		return $maximum;
+		return $maximumId;
 	}
 }
