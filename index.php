@@ -88,7 +88,15 @@ echo '<hr>';
 
 echo '<h2>3. Task - Most reps in row</h2>';
 
+$row = [5, 3, 10, 2, 1, 'cevapi', 'pljeskavica', 'cevapi', 3, 10, 'cevapi'];
+print_r($row);
+echo '<p>Most repeated: ' . getMostRepeatedElement($row) . '</p>';
 
+echo '<hr>';
+
+$row = [1, 2, 3, 4, 5, 6, 1, 1, 2, 3, 4, 5, 6];
+print_r($row);
+echo '<p>Most repeated: ' . getMostRepeatedElement($row) . '</p>';
 
 echo '<hr>';
 

@@ -59,6 +59,32 @@ if ( ! function_exists('getPow'))
 	}
 }
 
+if ( ! function_exists('getMostRepeatedElement'))
+{
+	/**
+	 * 3. task
+	 * 
+	 * Get most repeated element in row
+	 *
+	 * @param  array  $row
+	 * @return string
+	 */
+	function getMostRepeatedElement(array $row = [])
+	{
+		$array = [];
+		
+		foreach ($row as $value) {
+			if (array_key_exists($value, $array)) {
+				$array[$value]++;
+			} else {
+				$array[$value] = 1;
+			}
+		}
+		
+		return getMaxNumberIdInRow($array);
+	}
+}
+
 if ( ! function_exists('getMinNumberInRow'))
 {
 	/**
