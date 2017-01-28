@@ -160,3 +160,45 @@ if ( ! function_exists('getLocasticNumbers'))
 		return;
 	}
 }
+
+if ( ! function_exists('getRecursive'))
+{
+	/**
+	 * 8. task
+	 * 
+	 * Get all folder and files recursively
+	 *
+	 * @param  string  $folder
+	 * @return void
+	 */
+	function getRecursive($folder = '')
+	{
+		$except = [
+			'.',
+			'..',
+			'.git'
+		];
+		
+		$folder = ($folder ? rtrim($folder, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR : '');
+		
+		$path = getcwd().DIRECTORY_SEPARATOR.$folder;
+		
+		echo '<ul>';
+		
+		$files = scandir($path);
+		
+		foreach ($files as $key => $value) {
+			if (! in_array($value, $except)) {
+				echo '<li>'.$value.'</li>';	
+				
+				if (is_dir($path.$value)) {
+					getRecursive($folder.$value);
+				}
+			}
+		}
+		
+		echo '</ul>';
+		
+		return;
+	}
+}

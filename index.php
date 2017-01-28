@@ -194,6 +194,6 @@ echo '<hr>';
 
 echo '<h2>8. Task - Recursion with folders and files</h2>';
 
-
+getRecursive();
 
 echo '<hr>';
