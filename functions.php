@@ -84,3 +84,32 @@ if ( ! function_exists('getSmallestNumberInRow'))
 		return $minimum;
 	}
 }
+
+if ( ! function_exists('getLocasticNumbers'))
+{
+	/**
+	 * 7. task
+	 * 
+	 * Get all numbers from 1 to 100 divisible by 3, by 5 and by 3 and 5
+	 *
+	 * @return void
+	 */
+	function getLocasticNumbers()
+	{
+		$limit = 100;
+		
+		for ($i = 1; $i <= $limit; $i++) {
+			if ($i % 3 == 0) {
+				echo "LOCA<br>";
+			}
+			
+			if ($i % 5 == 0) {
+				echo "STIC<br>";
+			}
+			
+			if ($i % 3 == 0 && $i % 5 == 0) {
+				echo "LOCASTIC<br>";
+			}
+		}
+	}
+}

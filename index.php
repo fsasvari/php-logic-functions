@@ -157,7 +157,7 @@ echo '<hr>';
 
 echo '<h2>7. Task - Numbers divisible by 3, by 5 and by 3 and 5</h2>';
 
-
+getLocasticNumbers();
 
 echo '<hr>';
 
