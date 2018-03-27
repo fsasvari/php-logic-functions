@@ -3,15 +3,21 @@
 include('helpers.php');
 include('functions.php');
 
+echo '<hr>';
+
+echo '<h1>1. Tasks</h1>';
+
+echo '<hr>';
+
 /*
 |--------------------------------------------------------------------------
-| 1. Task
+| 1.1. Task
 |
 | Check if string is a palindrome
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>1. Task - Palindrome</h2>';
+echo '<h2>1.1. Task - Palindrome</h2>';
 
 $string = 'anavolimilovana';
 echo '<p>' . $string . ' = ' . var_export(isPalindrome($string), true) . '</p>';
@@ -38,13 +44,13 @@ echo '<hr>';
 
 /*
 |--------------------------------------------------------------------------
-| 2. Task
+| 1.2. Task
 |
 | Create php pow function
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>2. Task - Pow function</h2>';
+echo '<h2>1.2. Task - Pow function</h2>';
 
 $n = 2;
 $m = 3;
@@ -80,13 +86,13 @@ echo '<hr>';
 
 /*
 |--------------------------------------------------------------------------
-| 3. Task
+| 1.3. Task
 |
 | Get the most repetition number in row
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>3. Task - Most reps in row</h2>';
+echo '<h2>1.3. Task - Most reps in row</h2>';
 
 $row = ['zagrebacki', 'becki', 'osjecki', 'ljubljanski', 'salata :(', 'cevapi', 'pljeskavica', 'cevapi', 'sendvic', 'lepinja', 'cevapi'];
 print_r($row);
@@ -102,13 +108,13 @@ echo '<hr>';
 
 /*
 |--------------------------------------------------------------------------
-| 4. Task
+| 1.4. Task
 |
 | Get the smallest number in row
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>4. Task - Smallest number in row</h2>';
+echo '<h2>1.4. Task - Smallest number in row</h2>';
 
 $row = [5, 3, 10, 2, 1];
 print_r($row);
@@ -130,13 +136,13 @@ echo '<hr>';
 
 /*
 |--------------------------------------------------------------------------
-| 5. Task
+| 1.5. Task
 |
 | Get the longest common string in string
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>5. Task - Longest common string</h2>';
+echo '<h2>1.5. Task - Longest common string</h2>';
 
 $string1 = "sti";
 $string2 = "locastic";
@@ -157,13 +163,13 @@ echo '<hr>';
 
 /*
 |--------------------------------------------------------------------------
-| 6. Task
+| 1.6. Task
 |
 | Get the approximate sum of all members within the group
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>6. Task - The approximate sum of all members within the group</h2>';
+echo '<h2>1.6. Task - The approximate sum of all members within the group</h2>';
 
 $row = [2, 1, 4, 7, 1, 2, 6, 8];
 $groupsCount = 3;
@@ -172,8 +178,8 @@ $groups = getApproximateGroups($row, $groupsCount);
 print_r($row);
 echo '<hr>';
 foreach ($groups as $group) {
-	print_r($group['row']);
-	echo '<p>Sum: ' . $group['sum'] . '</p>';
+    print_r($group['row']);
+    echo '<p>Sum: ' . $group['sum'] . '</p>';
 }
 
 echo '<hr>';
@@ -185,21 +191,21 @@ $groups = getApproximateGroups($row, $groupsCount);
 print_r($row);
 echo '<hr>';
 foreach ($groups as $group) {
-	print_r($group['row']);
-	echo '<p>Sum: ' . $group['sum'] . '</p>';
+    print_r($group['row']);
+    echo '<p>Sum: ' . $group['sum'] . '</p>';
 }
 
 echo '<hr>';
 
 /*
 |--------------------------------------------------------------------------
-| 7. Task
+| 1.7. Task
 |
 | Get all numbers from 1 to 100 divisible by 3, by 5 and by 3 and 5
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>7. Task - Numbers divisible by 3, by 5 and by 3 and 5</h2>';
+echo '<h2>1.7. Task - Numbers divisible by 3, by 5 and by 3 and 5</h2>';
 
 getLocasticNumbers();
 
@@ -207,14 +213,54 @@ echo '<hr>';
 
 /*
 |--------------------------------------------------------------------------
-| 8. Task
+| 1.8. Task
 |
 | Get all folder and files recursively
 |--------------------------------------------------------------------------
 */
 
-echo '<h2>8. Task - Recursion with folders and files</h2>';
+echo '<h2>1.8. Task - Recursion with folders and files</h2>';
 
 getRecursive();
+
+echo '<hr>';
+
+echo '<h1>2. Tasks</h1>';
+
+echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 2.1. Task
+|
+| Explain integer sum in PHP
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>2.1. Task - Explain integer sum in PHP;</h2>';
+
+$result = 6 + "30%" + "$50";
+
+var_dump($result);
+
+echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 2.2. Task
+|
+| Random numbers from 1 to 100, print missing one
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>2.2. Task - Random numbers from 1 to 100, print missing one</h2>';
+
+$randomArray = createRandomArrayWithMissingNumber(1, 100);
+
+var_dump($randomArray);
+
+$missingNumber = getMissingNumberFromArray(100, $randomArray);
+
+var_dump($missingNumber);
 
 echo '<hr>';
