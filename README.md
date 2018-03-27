@@ -15,4 +15,5 @@ Other PHP functions:
 
  - 2.1. task - Explain integer sum &#10004;
  - 2.2. task - Random numbers from 1 to 100, print missing one &#10004;
- - 2.3. task -  &#10004;
+ - 2.3. task - Get image size in kB from remote URL &#10004;
+ - 2.4. task - Create SQL query without min and max result

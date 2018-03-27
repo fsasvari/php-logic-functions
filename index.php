@@ -264,3 +264,17 @@ $missingNumber = getMissingNumberFromArray(100, $randomArray);
 var_dump($missingNumber);
 
 echo '<hr>';
+
+/*
+|--------------------------------------------------------------------------
+| 2.3. Task
+|
+| Get image size in kB from URL
+|--------------------------------------------------------------------------
+*/
+
+echo '<h2>2.3. Task - Get image size in kB from URL</h2>';
+
+echo '<p>'.getRemoteFilesizeFromUrl('http://dubrovnikdigest.com/images/_evapi.jpg').'</p>';
+
+echo '<p>'.getRemoteFilesizeFromUrl('https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/1620503_1467853986831357_5893109775991148141_n.jpg?_nc_cat=0&oh=4c5688f67f7e2892d9c729ed70189fe6&oe=5B3CF72D').'</p>';

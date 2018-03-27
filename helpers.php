@@ -19,7 +19,7 @@ if ( ! function_exists('getMaxNumberIdInRow'))
                 $maximumId = $i;
             }
         }
-        
+
         return $maximumId;
     }
 }

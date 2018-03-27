@@ -331,3 +331,25 @@ if ( ! function_exists('getMissingNumberFromArray'))
         return $maxSum - $arraySum;
     }
 }
+
+if ( ! function_exists('getRemoteFilesizeFromUrl'))
+{
+    /**
+     * 2.3. task
+     *
+     * Get filesize in kB from remote url
+     *
+     * @param  array  $url
+     * @return int
+     */
+    function getRemoteFilesizeFromUrl($url)
+    {
+        $data = get_headers($url, true);
+
+        if (isset($data['Content-Length'])) {
+            return round($data['Content-Length'] / 1024, 2).' kB';
+        }
+
+        return 0;
+    }
+}
